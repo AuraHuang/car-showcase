@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image";
@@ -24,7 +23,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
   return (
     <div className='search-manufacturer'>
       <Combobox value={manufacturer} onChange={setManufacturer}>
-        <div className='relative w-full'>
+        <div className='relative w-full z-20'>
           <Combobox.Button className='absolute top-[14px]'>
             <Image
               src='/car-logo.svg'
@@ -77,7 +76,6 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
                           {item}
                         </span>
 
-                        {/* Show an active blue background color if the option is selected */}
                         {selected ? (
                           <span className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active? "text-white": "text-pribg-primary-purple"}`}
                           ></span>
